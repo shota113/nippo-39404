@@ -31,10 +31,10 @@ https://docs.google.com/spreadsheets/d/1FN0HGRcGvurYVA36hPIUGZ6NdnUy-ZkplwapIylb
 ・表示しシェアされたものについてコメントを残すことができる機能
 
 ## データベース設計
-実装開始の際に添付いたします。
+[![Image from Gyazo](https://i.gyazo.com/de85ff9f67fbf86d367fbc6098a99f08.png)](https://gyazo.com/de85ff9f67fbf86d367fbc6098a99f08)
 
 ## 画面遷移図
-実装開始の際に添付いたします。
+[![Image from Gyazo](https://i.gyazo.com/306ab67bd0482919dad0fb41e693136a.png)](https://gyazo.com/306ab67bd0482919dad0fb41e693136a)
 
 ## 開発環境
 実装後、記入いたします。
