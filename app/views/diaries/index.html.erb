@@ -1,0 +1,28 @@
+<%= render "shared/header" %>
+  <div class='main'>
+
+    <div class='diary-contents' >
+      <h2 class='title' >日報一覧</h2>
+    </div>
+    <ul class='diary-lists'>
+
+    <% @diaries.each do |diary| %>
+      <li class='list'>
+        <%= link_to diary_path(diary) do %>
+        <div class='diary-img-content'>
+          <%= image_tag diary.image, class: 'diary-img' if diary.image.attached? %>
+          <% end %>
+        </div>
+        <div class='diary-info'>
+          <h3 class='diary-name'>
+            <%= diary.name %>
+          </h3>
+        <% end %>
+        </div>
+      </li>
+    <% end %>
+
+
+
+  </div>
+<%= render "shared/footer" %>
