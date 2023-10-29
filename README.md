@@ -28,7 +28,7 @@ https://docs.google.com/spreadsheets/d/1FN0HGRcGvurYVA36hPIUGZ6NdnUy-ZkplwapIylb
 
 ## 実装予定の機能
 ・写真を送信し、表示する機能
-・表示しシェアされたものについてコメントを残すことができる機能
+・シェアされたものについてコメントを残すことができる機能
 
 ## データベース設計
 [![Image from Gyazo](https://i.gyazo.com/de85ff9f67fbf86d367fbc6098a99f08.png)](https://gyazo.com/de85ff9f67fbf86d367fbc6098a99f08)
