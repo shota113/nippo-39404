@@ -29,7 +29,7 @@
         現場名
         <span class="indispensable">必須</span>
       </div>
-      <%= f.text_area :name, class:"diaries-text", id:"diary-name", placeholder:"現場名（必須 40文字まで)", maxlength:"40" %>
+      <%= f.text_area :place, class:"diaries-text", id:"diary-place", placeholder:"現場名（必須 40文字まで)", maxlength:"40" %>
       <div class="diaries-explain">
         <div class="weight-bold-text">
           作業内容
@@ -42,12 +42,12 @@
           開始時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :time, class:"start-time", id:"work-start", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+        <%= f.text_area :time, class:"diaries-text", id:"work-start", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
         <div class="weight-bold-text">
           終了時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :time, class:"ending-time", id:"work-end", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+        <%= f.text_area :time, class:"diaries-text", id:"work-end", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
       </div>
     </div>
     <%# /就業場所・作業内容・就業時間 %>

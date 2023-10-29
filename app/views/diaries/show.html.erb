@@ -1,0 +1,67 @@
+<%= render "shared/header" %>
+
+<%# 日報の概要 %>
+<div class="diary-show">
+  <div class="diary-box">
+    <h2 class="name">
+      <%= @diary.name %>
+    </h2>
+    <div class="diary-img-content">
+      <%= image_tag @diary.image ,class:"diary-box-img" %>
+      <% end %>
+    </div>
+
+    <% if user_signed_in? %>
+      <% if current_user.id == @diary.user_id %>
+        <%= link_to "日報の編集",edit_diary_path, method: :get, class: "diary-red-btn" %>
+        <p class="or-text">or</p>
+        <%= link_to "削除", diary_path(@diary), method: :delete, class:"diary-destroy" %>
+      <% else %>
+      <% end %>
+    <% end %>
+
+      <div class="diary-explain-box">
+        <span><%= @diary.content %></span>
+      </div>
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-diary">投稿者</th>
+          <td class="detail-value"><%= @diary.user.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">現場名</th>
+          <td class="detail-value"><%= @diary.work.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">作業内容</th>
+          <td class="detail-value"><%= @diary.content.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">開始時間</th>
+          <td class="detail-value"><%= @diary.work_start.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">終了時間</th>
+          <td class="detail-value"><%= @diary.work_end.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-diary">作業進捗</th>
+          <td class="detail-value"><%= @diary.category.name %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<%# /日報の概要 %>
+
+  <div class="comment-box">
+    <form>
+      <textarea class="comment-text"></textarea>
+      <button type="submit" class="comment-btn">
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"40",height:"50"%>
+        <span>コメントする<span>
+      </button>
+    </form>
+  </div>
+</div>
+<%= render "shared/footer" %>
