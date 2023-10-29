@@ -28,7 +28,7 @@ https://docs.google.com/spreadsheets/d/1FN0HGRcGvurYVA36hPIUGZ6NdnUy-ZkplwapIylb
 
 ## 実装予定の機能
 ・写真を送信し、表示する機能
-・表示しシェアされたものについてコメントを残すことができる機能
+・シェアされたものについてコメントを残すことができる機能
 
 ## データベース設計
 実装開始の際に添付いたします。
