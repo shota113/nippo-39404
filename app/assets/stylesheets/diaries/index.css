@@ -1,0 +1,46 @@
+.main {
+  background: #f8f8f8;
+}
+
+.diary-contents {
+  background-color: #FFF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10vh 0;
+}
+
+.diary-contents>.title {
+  font-size: 5vh;
+  line-height: 1.4;
+  font-weight: bold;
+}
+
+.diary-lists {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.diary-lists>.list {
+  width: 37vh;
+  padding: 1vw;
+  background-color: #FFF;
+}
+
+.item-img {
+  width: 33vh;
+  height: 33vh;
+}
+
+.diary-info {
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
+}
+
+.diary-name {
+  font-size: 2.5vh;
+}
+
