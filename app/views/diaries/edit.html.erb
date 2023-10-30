@@ -1,0 +1,87 @@
+<%# cssは日報投稿のものを併用。 app/assets/stylesheets/diaries/new.css %>
+<div class="diaries-contents">
+  
+  <div class="diaries-content-main">
+    <h2 class="diaries-content-title">日報の情報を入力</h2>
+    <%= form_with model: @diary, local: true do |f| %>
+
+    
+    <%= render 'shared/error_messages', model: f.object %>
+    
+
+    <%# 現場写真・状況確認写真 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        就業場所または状況確認の写真
+        <span class="indispensable">必須</span>
+      </div>
+      <div class="click-upload">
+        <p>
+          クリックしてファイルをアップロード
+        </p>
+        <%= f.file_field :image, id:"diary-image" %>
+      </div>
+    </div>
+    <%# /現場写真・状況確認写真 %>
+
+    <%# 就業場所と作業内容・就業時間 %>
+    <div class="new-diaries">
+      <div class="weight-bold-text">
+        現場名
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :place, class:"diaries-text", id:"diary-place", placeholder:"現場名（必須 40文字まで)", maxlength:"40" %>
+      <div class="diaries-explain">
+        <div class="weight-bold-text">
+          作業内容
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :content, class:"diaries-text", id:"diary-info", placeholder:"作業内容を記入して下さい（必須 1,000文字まで）（作業の進捗、材料の状況、注意点など）例）本日の作業内容は北広島ボールパークにて屋上防水を実施。強風の為、物が飛ばないよう対策し作業しました。" ,rows:"10" ,maxlength:"1000" %>
+      </div>
+      <div class="work-time">
+        <div class="weight-bold-text">
+          開始時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :time, class:"diaries-text", id:"work-start", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+        <div class="weight-bold-text">
+          終了時間
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :time, class:"diaries-text", id:"work-end", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+      </div>
+    </div>
+    <%# /就業場所・作業内容・就業時間 %>
+
+    <%# 作業進捗について %>
+    <div class="diaries-detail">
+      <div class="form">
+        <div class="weight-bold-text">
+          作業進捗
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"diary-category"}) %>
+      </div>
+    </div>
+    <%# /作業進捗について %>
+
+
+    <%# 注意書き %>
+    <div class="caution">
+      <p class="sentence">
+        日報はできる限り具体的に記入して下さい。
+      </p>
+      <p class="sentence">
+        また、必ず当日中に投稿をお願いします。
+      </p>
+    </div>
+    <%# /注意書き %>
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "投稿する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+</div>
