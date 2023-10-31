@@ -11,14 +11,13 @@
         <%= link_to diary_path(diary) do %>
         <div class='diary-img-content'>
           <%= image_tag diary.image, class: 'diary-img' if diary.image.attached? %>
-          <% end %>
         </div>
         <div class='diary-info'>
           <h3 class='diary-name'>
             <%= diary.name %>
           </h3>
-        <% end %>
         </div>
+        <% end %>
       </li>
     </ul>
     <% end %>
