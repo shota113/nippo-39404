@@ -6,21 +6,21 @@
     </div>
     <ul class='diary-lists'>
 
-    <% @diaries.each do |diary| %>
+    
       <li class='list'>
-        <%= link_to diary_path(diary) do %>
+        <%= link_to '#' do %>
         <div class='diary-img-content'>
-          <%= image_tag diary.image, class: 'diary-img' if diary.image.attached? %>
+          <%= image_tag 'diary-sample.png', class: 'diary-img' %>
         </div>
         <div class='diary-info'>
           <h3 class='diary-name'>
-            <%= diary.name %>
+            <%= "日報タイトル" %>
           </h3>
         </div>
         <% end %>
       </li>
     </ul>
-    <% end %>
+    
   </div>
   <%= link_to('diaries/new', class: 'purchase-btn') do %>
   <span class='purchase-btn-text'>日報を投稿する</span>
