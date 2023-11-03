@@ -59,14 +59,14 @@
       <label class="form-text">会社名</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.work_field :company, class:"input-default", id:"company", placeholder:"所属する会社を入力して下さい" %>
+    <%= f.text_area :company, class:"input-default", id:"company", placeholder:"所属する会社を入力して下さい" %>
   </div>
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">社員番号</label>
       <span class="indispensable">必須</span>
     </div>
-    <%= f.work_field :number, class:"input-default", id:"number", placeholder:"社員番号を入力して下さい" %>
+    <%= f.number_field :number, class:"input-default", id:"number", placeholder:"社員番号を入力して下さい" %>
   </div>
   <div class='register-btn'>
     <%= f.submit "会員登録" ,class:"register-red-btn" %>
