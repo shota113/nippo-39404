@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :diaries
   has_many :comments
-  validates :name, presence: true
   validates :first_name, presence: true, format:{with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
   validates :last_name, presence: true, format:{with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
   validates :first_name_kana, presence: true, format:{with: /\A[ァ-ヶー－]+\z/}
