@@ -6,7 +6,7 @@
     <ul class='lists-right'>
     <% if user_signed_in? %>
       <div class="user_nav lists-right">
-        <li><%= link_to current_user.name, "#", class: "user-name" %></li>
+        <li><%= link_to current_user.last_name, "#", class: "user-name" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
       </div>
     <% else %>
