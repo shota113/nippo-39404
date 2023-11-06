@@ -29,9 +29,13 @@
   background-color: #FFF;
 }
 
-.item-img {
+.diary-img {
   width: 33vh;
   height: 33vh;
+}
+
+.diary-img-content {
+  position: relative;
 }
 
 .diary-info {
