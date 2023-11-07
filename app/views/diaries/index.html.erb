@@ -6,13 +6,13 @@
     </div>
     <ul class='diary-lists'>
       <li class='list'>
-        <%= link_to '#' do %>
+        <%= link_to diary_path(diary) do %>
         <div class='diary-img-content'>
-          <%= image_tag 'diary-sample.png', class: 'diary-img' %>
+          <%= image_tag diary.iamge, class: 'diary-img' %>
         </div>
         <div class='diary-info'>
           <h3 class='diary-name'>
-            <%= "現場名" %>
+            <%= diary.place %>
           </h3>
         </div>
         <% end %>
