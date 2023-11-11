@@ -5,6 +5,8 @@
       <h2 class='title' >日報一覧</h2>
     </div>
     <ul class='diary-lists'>
+
+    <% @diaries.each do |diary| %>
       <li class='list'>
         <%= link_to diary_path(diary) do %>
         <div class='diary-img-content'>
@@ -17,6 +19,7 @@
         </div>
         <% end %>
       </li>
+    <% end %>
     </ul>
     
   </div>
