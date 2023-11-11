@@ -34,19 +34,19 @@
           作業内容
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :content, class:"diaries-text", id:"diary-info", placeholder:"作業内容を記入して下さい（必須:1,000文字まで)(作業の進捗、材料の状況、注意点など）例）本日の作業内容は北広島ボールパークにて屋上防水を実施。強風の為、物が飛ばないよう対策し作業しました。" ,rows:"10" ,maxlength:"1000" %>
+        <%= f.text_area :content, class:"diaries-text", id:"diary-info", placeholder:"作業内容を記入して下さい（必須:1,000文字まで)(作業の進捗、材料の状況、注意点など）例）本日の作業内容は北広島ボールパークにて屋上防水を実施。強風の為、物が飛ばないよう対策し作業しました。", rows:"2", maxlength:"1000" %>
       </div>
       <div class="work-time">
         <div class="weight-bold-text">
           開始時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :time, class:"diaries-text", id:"work-start", placeholder:"作業開始時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+        <%= f.text_area :time, class:"diaries-text", id:"work-start", placeholder:"作業開始時間を記入して下さい", maxlength:"6" %>
         <div class="weight-bold-text">
           終了時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :time, class:"diaries-text", id:"work-end", placeholder:"作業終了時間を記入して下さい" ,rows:"4" ,maxlength:"5" %>
+        <%= f.text_area :time, class:"diaries-text", id:"work-end", placeholder:"作業終了時間を記入して下さい", maxlength:"6" %>
       </div>
     </div>
     <%# /就業場所・作業内容・就業時間 %>
