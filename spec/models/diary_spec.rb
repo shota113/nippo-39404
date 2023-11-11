@@ -22,6 +22,31 @@ RSpec.describe Diary, type: :model do
         @diary.valid?
         expect(@diary.errors.full_messages).to include("Place can't be blank")
       end
+      it 'categoryが空だと投稿できない' do
+        @diary.category = ''
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("Category can't be blank")
+      end
+      it 'workが空だと投稿できない' do
+        @diary.work = ''
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("Work can't be blank")
+      end
+      it 'start_timeが空だと投稿できない' do
+        @diary.start_time = ''
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("start_time can't be blank")
+      end
+      it 'ending_timeが空だと投稿できない' do
+        @diary.ending_time = ''
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("ending_time can't be blank")
+      end
+      it 'categoryが「---」だと出品できない' do
+        @diary.category_id = 1
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("Category must be other than 1")
+      end
     end
   end
 end
