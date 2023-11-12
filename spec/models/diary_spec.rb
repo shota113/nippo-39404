@@ -23,7 +23,7 @@ RSpec.describe Diary, type: :model do
         expect(@diary.errors.full_messages).to include("Place can't be blank")
       end
       it 'categoryが空だと投稿できない' do
-        @diary.category = ''
+        @diary.category_id = ''
         @diary.valid?
         expect(@diary.errors.full_messages).to include("Category can't be blank")
       end
@@ -35,12 +35,12 @@ RSpec.describe Diary, type: :model do
       it 'start_timeが空だと投稿できない' do
         @diary.start_time = ''
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("start_time can't be blank")
+        expect(@diary.errors.full_messages).to include("Start time can't be blank")
       end
       it 'ending_timeが空だと投稿できない' do
         @diary.ending_time = ''
         @diary.valid?
-        expect(@diary.errors.full_messages).to include("ending_time can't be blank")
+        expect(@diary.errors.full_messages).to include("Ending time can't be blank")
       end
       it 'categoryが「---」だと出品できない' do
         @diary.category_id = 1

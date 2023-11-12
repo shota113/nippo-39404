@@ -9,14 +9,14 @@
     <% @diaries.each do |diary| %>
       <li class='list'>
         <%= link_to diary_path(diary) do %>
-        <div class='diary-img-content'>
-          <%= image_tag diary.iamge, class: 'diary-img' %>
-        </div>
-        <div class='diary-info'>
-          <h3 class='diary-name'>
-            <%= diary.place %>
-          </h3>
-        </div>
+          <div class='diary-img-content'>
+            <%= image_tag diary.image, class: 'diary-img' %>
+          </div>
+          <div class='diary-info'>
+            <h3 class='diary-name'>
+              <%= diary.place %>
+            </h3>
+          </div>
         <% end %>
       </li>
     <% end %>
