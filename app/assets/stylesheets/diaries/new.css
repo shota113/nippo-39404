@@ -64,7 +64,7 @@
 .new-diaries {
   padding: 2vh 0;
 }
-.dairies-text {
+.diaries-text {
   width: 100%;
   padding: 16px 16px 8px;
   border-radius: 4px;
@@ -72,7 +72,7 @@
   font-size: 16px;
   resize: none;
 }
-.dairies-explain {
+.diaries-explain {
   margin-top: 2vh;
 }
 /* /就業場所と作業内容・就業時間 */
@@ -113,8 +113,8 @@
 }
 
 .sell-btn {
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #FF773E;
+  border: 1px solid #FF773E;
   color: #fff;
   width: 100%;
   height: 50px;
