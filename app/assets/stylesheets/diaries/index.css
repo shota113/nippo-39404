@@ -1,5 +1,13 @@
+a {
+  text-decoration: none;
+}
+
 .main {
   background: #f8f8f8;
+}
+
+ul {
+  list-style: none;
 }
 
 .diary-contents {
