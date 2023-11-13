@@ -1,11 +1,15 @@
 class DiariesController < ApplicationController
-  before_action :move_to_index, except: [:index]
+  before_action :move_to_index, except: [:index, :show]
   def index
     @diaries = Diary.order("created_at DESC")
   end
 
   def new
     @diary = Diary.new
+  end
+
+  def show
+    @diary = Diary.find(params[:id])
   end
 
   def create
