@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2023_11_10_083201) do
     t.bigint "user_id", null: false
     t.string "place", null: false
     t.text "work", null: false
-    t.time "start_time", null: false
-    t.time "ending_time", null: false
+    t.string "start_time", null: false
+    t.string "ending_time", null: false
     t.integer "category_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
