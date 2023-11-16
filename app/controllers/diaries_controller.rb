@@ -19,6 +19,14 @@ class DiariesController < ApplicationController
     else
       render 'new'
     end
+
+    def edit
+      if @diary.user_id == current_user.id
+      else
+        redirect_to root_path
+      end
+    end
+
   end
 
   def move_to_index
