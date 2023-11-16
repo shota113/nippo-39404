@@ -12,7 +12,7 @@
 
     <% if user_signed_in? %>
       <% if current_user.id == @diary.user_id %>
-        <%= link_to "日報の編集",edit_diary_path, method: :get, class: "diary-red-btn" %>
+        <%= link_to "日報の編集",edit_diary_path, method: :get, class: "diary-orange-btn" %>
         <p class="or-text">or</p>
         <%= link_to "削除", diary_path(@diary), method: :delete, class:"diary-destroy" %>
       <% else %>
