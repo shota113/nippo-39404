@@ -30,7 +30,7 @@
         </tr>
         <tr>
           <th class="detail-diary">現場名</th>
-          <td class="detail-value"><%= @diary.work %></td>
+          <td class="detail-value"><%= @diary.place %></td>
         </tr>
         <tr>
           <th class="detail-diary">作業内容</th>
@@ -38,11 +38,11 @@
         </tr>
         <tr>
           <th class="detail-diary">開始時間</th>
-          <td class="detail-value"><%= @diary.start_time.to_formatted_s(:time) %></td>
+          <td class="detail-value"><%= @diary.start_time %></td>
         </tr>
         <tr>
           <th class="detail-diary">終了時間</th>
-          <td class="detail-value"><%= @diary.ending_time.to_formatted_s(:time) %></td>
+          <td class="detail-value"><%= @diary.ending_time %></td>
         </tr>
         <tr>
           <th class="detail-diary">作業進捗</th>
