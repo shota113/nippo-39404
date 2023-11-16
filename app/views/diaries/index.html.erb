@@ -20,8 +20,19 @@
         <% end %>
       </li>
     <% end %>
+    <% if @diaries.blank? then %>
+      <li class='list'>
+        <%= link_to '#' do %>
+        <%= image_tag "https://tech-master.s3.amazonaws.com/uploads/curriculums/images/Rails1-4/sample.jpg", class: "diary-img" %>
+        <div class='diary-info'>
+          <h3 class='diary-name'>
+            投稿してみよう！
+          </h3>
+        </div>
+        <% end %>
+      </li>
+    <% end %>
     </ul>
-    
   </div>
   <%= link_to('diaries/new', class: 'purchase-btn') do %>
     <span class='purchase-btn-text'>投稿する</span>

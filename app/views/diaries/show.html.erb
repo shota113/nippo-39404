@@ -4,11 +4,10 @@
 <div class="diary-show">
   <div class="diary-box">
     <h2 class="name">
-      <%= @diary.name %>
+      <%= @diary.place %>
     </h2>
     <div class="diary-img-content">
       <%= image_tag @diary.image ,class:"diary-box-img" %>
-      <% end %>
     </div>
 
     <% if user_signed_in? %>
@@ -21,29 +20,29 @@
     <% end %>
 
       <div class="diary-explain-box">
-        <span><%= @diary.content %></span>
+        <span><%= @diary.work %></span>
       </div>
     <table class="detail-table">
       <tbody>
         <tr>
           <th class="detail-diary">投稿者</th>
-          <td class="detail-value"><%= @diary.user.name %></td>
+          <td class="detail-value"><%= @diary.user.last_name  %> <%= @diary.user.first_name  %></td>
         </tr>
         <tr>
           <th class="detail-diary">現場名</th>
-          <td class="detail-value"><%= @diary.work.name %></td>
+          <td class="detail-value"><%= @diary.place %></td>
         </tr>
         <tr>
           <th class="detail-diary">作業内容</th>
-          <td class="detail-value"><%= @diary.content.name %></td>
+          <td class="detail-value"><%= @diary.work %></td>
         </tr>
         <tr>
           <th class="detail-diary">開始時間</th>
-          <td class="detail-value"><%= @diary.work_start.name %></td>
+          <td class="detail-value"><%= @diary.start_time %></td>
         </tr>
         <tr>
           <th class="detail-diary">終了時間</th>
-          <td class="detail-value"><%= @diary.work_end.name %></td>
+          <td class="detail-value"><%= @diary.ending_time %></td>
         </tr>
         <tr>
           <th class="detail-diary">作業進捗</th>
@@ -58,10 +57,9 @@
     <form>
       <textarea class="comment-text"></textarea>
       <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"40",height:"50"%>
+        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
         <span>コメントする<span>
       </button>
     </form>
   </div>
 </div>
-<%= render "shared/footer" %>
