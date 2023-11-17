@@ -41,12 +41,12 @@
           開始時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :start_time, class:"diaries-text", id:"work-start", placeholder:"作業開始時間を記入して下さい 例）12:00", maxlength:"6" %>
+        <%= f.text_area :start_time, class:"diaries-text", id:"work-start", step: 60, placeholder:"作業開始時間を記入して下さい 例）12:00", maxlength:"6" %>
         <div class="weight-bold-text">
           終了時間
           <span class="indispensable">必須</span>
         </div>
-        <%= f.text_area :ending_time, class:"diaries-text", id:"work-end", placeholder:"作業終了時間を記入して下さい 例）19:00", maxlength:"6" %>
+        <%= f.text_area :ending_time, class:"diaries-text", id:"work-end", step: 60, placeholder:"作業終了時間を記入して下さい 例）19:00", maxlength:"6" %>
       </div>
     </div>
     <%# /就業場所・作業内容・就業時間 %>
