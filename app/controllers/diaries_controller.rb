@@ -21,6 +21,24 @@ class DiariesController < ApplicationController
     end
   end
 
+    def edit
+      @diary = Diary.find(params[:id])
+      if @diary.user_id == current_user.id
+      else
+        redirect_to root_path
+      end
+    end
+
+    def update
+      @diary = Diary.find(params[:id])
+      if @diary.update(diary_params)
+        redirect_to diary_path(@diary)
+      else
+         render 'edit'
+      end
+    end
+
+
   def move_to_index
     unless user_signed_in?
       redirect_to action: :index
