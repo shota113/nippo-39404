@@ -10,6 +10,8 @@ class DiariesController < ApplicationController
   end
 
   def show
+    @comments = @diary.comments.includes(:user)
+    @comment = Comment.new
   end
 
   def create
