@@ -3,7 +3,7 @@ class Diary < ApplicationRecord
   belongs_to :category
   belongs_to :user
   has_one_attached :image
-  has_many :comment
+  has_many :comments
 
   validates :place, presence: true
   validates :category_id, presence: true, numericality:{ other_than: 1 }

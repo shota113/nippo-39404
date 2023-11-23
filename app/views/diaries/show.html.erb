@@ -53,13 +53,22 @@
   </div>
 <%# /日報の概要 %>
 
-  <div class="comment-box">
-    <form>
-      <textarea class="comment-text"></textarea>
-      <button type="submit" class="comment-btn">
-        <%= image_tag "comment.png" ,class:"comment-flag-icon" ,width:"20",height:"25"%>
-        <span>コメントする<span>
-      </button>
-    </form>
+  <div id="comments">
+    <h4>＜コメント一覧＞</h4>
+      <% @diary.comments.each do |comment| %>
+        <div class="comment">
+          <p class="user-info"><%= comment.user.last_name %>： </p>
+          <p><%= comment.text%></p>
+        </div>
+      <% end %>
+  </div>
+
+  <div class="comment-form">
+    <% if user_signed_in? %>
+      <%= form_with model: [@diary, @comment], id: "comment-form" do |f| %>
+        <%= f.text_area :text , class: "comment-text"%>
+        <%= f.submit "コメントをする", class: "comment-submit" %>
+      <% end %>
+    <% end %>
   </div>
 </div>
