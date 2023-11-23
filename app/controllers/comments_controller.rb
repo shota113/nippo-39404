@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
+    @diary = Diary.find(params[:diary_id])
     if @comment.save
-      redirect_to diary_path(params[:diary_id])
+      CommentChannel.broadcast_to @item, { comment: @comment, user: @comment.user }
     end
   end
 
