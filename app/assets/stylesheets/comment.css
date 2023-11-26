@@ -1,0 +1,28 @@
+.comment-form{
+  display: flex;
+}
+
+.comment-text{
+  display: block;
+  margin-top: 20px;
+  width: 150px;
+}
+
+.comment-submit{
+  display: block;
+  margin-top: 20px;
+  background: #00FF00;
+}
+
+.comment{
+  display: flex;
+}
+
+.comment p{
+   margin: 0;
+}
+
+.user-info{
+  color: gray;
+  font-weight: bold;
+}
