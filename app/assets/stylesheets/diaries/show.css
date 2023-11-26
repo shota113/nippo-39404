@@ -9,7 +9,7 @@
 
 .diary-box {
   background-color: #FFF;
-  width: 70vw;
+  width: 100vw;
   min-width: 1200px;
   padding: 10vh 15vw;
   display: flex;
@@ -25,7 +25,7 @@
 
 .diary-box-img {
   height: 50vh;
-  width: 60vw;
+  width: 70vw;
   min-height: 500px;
   background-color: rgb(205, 202, 202);
   object-fit: contain;

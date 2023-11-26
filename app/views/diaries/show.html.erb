@@ -19,9 +19,7 @@
       <% end %>
     <% end %>
 
-      <div class="diary-explain-box">
-        <span><%= @diary.work %></span>
-      </div>
+      
     <table class="detail-table">
       <tbody>
         <tr>
@@ -50,6 +48,7 @@
         </tr>
       </tbody>
     </table>
+    <%=link_to 'もどる', root_path, class:"back-btn" %>
   </div>
 <%# /日報の概要 %>
 
